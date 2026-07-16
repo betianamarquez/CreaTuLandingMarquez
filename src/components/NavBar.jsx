@@ -8,68 +8,35 @@ const NavBar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        background: "#111827",
-        color: "white",
-        padding: "20px 40px",
+        padding: "20px",
+        background: "#f5f5f5",
       }}
     >
-      <h2>
-        <Link
-          to="/"
-          style={{
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
-          MiTienda
-        </Link>
-      </h2>
-
-      <ul
+      <Link
+        to="/"
         style={{
-          display: "flex",
-          gap: "25px",
-          listStyle: "none",
+          textDecoration: "none",
+          color: "black",
+          fontSize: "24px",
+          fontWeight: "bold",
         }}
       >
-        <li>
-          <Link
-            style={{ color: "white", textDecoration: "none" }}
-            to="/"
-          >
-            Inicio
-          </Link>
-        </li>
+        Urban Import
+      </Link>
 
-        <li>
-          <Link
-            style={{ color: "white", textDecoration: "none" }}
-            to="/category/zapatillas"
-          >
-            Zapatillas
-          </Link>
-        </li>
+      <div
+        style={{
+          display: "flex",
+          gap: "20px",
+          alignItems: "center",
+        }}
+      >
+        <Link to="/">
+          Inicio
+        </Link>
 
-        <li>
-          <Link
-            style={{ color: "white", textDecoration: "none" }}
-            to="/category/remeras"
-          >
-            Remeras
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            style={{ color: "white", textDecoration: "none" }}
-            to="/category/pantalones"
-          >
-            Pantalones
-          </Link>
-        </li>
-      </ul>
-
-      <CartWidget />
+        <CartWidget />
+      </div>
     </nav>
   );
 };

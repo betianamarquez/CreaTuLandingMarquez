@@ -1,19 +1,30 @@
 import { Link } from "react-router-dom";
-import "./Item.css";
 
 const Item = ({ product }) => {
   return (
-    <div className="card">
-      <img src={product.image} alt={product.title} />
+    <div
+      style={{
+        border: "1px solid gray",
+        padding: "15px",
+        width: "250px",
+      }}
+    >
+      <img
+        src={product.Imagen || product["Imagen "]}
+        alt={product.Titulo || product["Titulo "]}
+        width="200"
+      />
 
-      <h3>{product.title}</h3>
+      <h3>
+        {product.Titulo || product["Titulo "]}
+      </h3>
 
-      <p>${product.price}</p>
-
-      <p>{product.category}</p>
+      <p>
+        ${product.Precio || product["Precio "]}
+      </p>
 
       <Link to={`/item/${product.id}`}>
-        <button>Ver detalle</button>
+        Ver detalle
       </Link>
     </div>
   );

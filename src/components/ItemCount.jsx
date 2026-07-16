@@ -1,24 +1,36 @@
 import { useState } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({ stock, onAdd }) => {
+
   const [count, setCount] = useState(1);
 
   return (
-    <div style={{ marginTop: "20px" }}>
-      <button onClick={() => setCount(count - 1)} disabled={count <= 1}>
+    <div>
+
+      <button
+        onClick={() => setCount(count - 1)}
+        disabled={count === 1}
+      >
         -
       </button>
 
-      <span style={{ margin: "0 15px" }}>{count}</span>
+      <span style={{ margin: "0 15px" }}>
+        {count}
+      </span>
 
-      <button onClick={() => setCount(count + 1)}>
+      <button
+        onClick={() => setCount(count + 1)}
+        disabled={count === stock}
+      >
         +
       </button>
 
-      <br />
-      <br />
+      <br /><br />
 
-      <button>Agregar al carrito</button>
+      <button onClick={() => onAdd(count)}>
+        Agregar al carrito
+      </button>
+
     </div>
   );
 };

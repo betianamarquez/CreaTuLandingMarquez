@@ -5,8 +5,8 @@ const ItemList = ({ products }) => {
     <div
       style={{
         display: "flex",
+        gap: "20px",
         flexWrap: "wrap",
-        justifyContent: "center",
       }}
     >
       {products.map((product) => (

@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-function NotFound() {
+const NotFound = () => {
   return (
-    <div>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>404</h1>
-      <p>Página no encontrada</p>
+      <h2>Página no encontrada</h2>
 
       <Link to="/">Volver al inicio</Link>
     </div>
   );
-}
+};
 
 export default NotFound;
